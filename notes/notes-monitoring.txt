@@ -1,0 +1,24 @@
+JVM Monitoring
+===============
+1)JDK_HOME\bin
+2) CLI vs GUI
+CLI: jcmd, jps, jstack, jmap,... 
+GUI: jconsole -> JMX/MBean Console
+3) Client-Server -> Remote Monitoring
+4) JMX (Java Management eXtension) and MBeans
+     i. Metric
+    ii. Command
+   iii. Observer/Event-Driven
+   MBean Development
+5) JFR (JDK/JVM Flight Recorder)
+   Custom Event 
+6) VisualVM (Netbeans RCP)
+    Monitoring, Profiling
+               i. Sampling ii. Instromentation
+	MBean Console		   
+7) JMC (Oracle, Mission Control)
+    i. JFR
+   ii. Monitoring, MBean Console  
+   
+   
+	
