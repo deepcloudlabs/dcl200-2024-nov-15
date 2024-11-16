@@ -1,0 +1,42 @@
+JVM Process -> java 
+1) jps -> JVM Process
+Linux: ps -fe
+       pgrep
+	   kill  
+Windows: tasklist
+         taskkill /PID 40648	   
+		 
+Multi-Process, Distributed
+RMI (Remote Method Invocation)
+Process API		 
+
+JVM Ergonomics -> Java SE 8 --> Java SE 23
+-XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal
+jps -l -v
+jps -q
+
+2) jcmd
+   heap dump: jcmd <pid> GC.heap_dump <filename>
+              jmap -dump:format=b,file=<filename> <pid>
+              jhat -port 9090 c:\tmp\kafka-hd-2024.nov.16-2.05pm.dat			  
+   thread dump: jcmd <pid> Thread.print <filename>
+                jstack <pid> > <filename>
+   gc:
+              jstat -gc 53328 2000 30
+			  jstat -class 53328 2000 30
+			  jstat -compiler 53328 2000 30
+				available options for jstat:			  
+					-class
+					-compiler
+					-gc
+					-gccapacity
+					-gccause
+					-gcmetacapacity
+					-gcnew
+					-gcnewcapacity
+					-gcold
+					-gcoldcapacity
+					-gcutil
+					-printcompilation	
+
+jstatd -J-Djava.security.policy=jstatd.tools.policy -J-Djava.rmi.server.logCalls=true -J-Djava.rmi.server.hostname=192.168.1.113 -p 2020					
