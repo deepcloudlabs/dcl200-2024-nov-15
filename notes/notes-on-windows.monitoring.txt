@@ -1,0 +1,5 @@
+Windows:
+1. taskmgr (Task Manager)
+2. resmon (Resource Monitor)
+3. perfmon (Performance Monitor)
+4. logman (Log Manager)
