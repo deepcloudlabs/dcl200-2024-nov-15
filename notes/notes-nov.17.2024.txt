@@ -1,0 +1,19 @@
+Unified JVM Logging
+Java SE 9+
+-Xlog:<tags>=<level>:<output>:<decorators>
+        levels     -> debug,error,warning,info,off,trace
+		decorators -> time, utctime, uptime, timemillis, uptimemillis
+                      timenanos, uptimenanos, pid, hostname, level, tags, tid
+		output     -> stdout, stderr, file=<path>/<filename> 		  
+-Xlog:all=warning:stderr:uptime,level,tags
+-Xlog:gc*=warning:stderr:uptime,level,tags
+-Xlog:thread*=warning:stderr:uptime,level,tags
+java -Xlog:thread*=warning:stderr:uptime,level,tags -jar app.jar
+jcmd 53328 VM.log what=gc*=trace
+jcmd 53328 VM.log decorators=hostname,tid output=file=c:/tmp/kafka.gc.logs
+
+To turn off all logs
+jcmd 53328 VM.log what=all=off
+
+To turn off all gc related logs
+jcmd 53328 VM.log what=gc*=off
