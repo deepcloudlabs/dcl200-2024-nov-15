@@ -24,7 +24,6 @@ public class LotteryRestController {
 	private final LotteryService lotteryService;
 
 	public LotteryRestController(LotteryService lotteryService) {
-		super();
 		this.lotteryService = lotteryService;
 	}
 
