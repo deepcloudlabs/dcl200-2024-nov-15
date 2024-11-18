@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ExecutorServiceConfig {
 	@Bean("my-pool")
-	public ExecutorService exec1() {
+	ExecutorService exec1() {
 		return Executors.newFixedThreadPool(100);
 	}
 }
