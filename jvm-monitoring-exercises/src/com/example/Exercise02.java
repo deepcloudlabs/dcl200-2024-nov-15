@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Exercise02 {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		int x = 42; // 4-Byte
 		Integer y = Integer.valueOf(542); // 4-Byte + 12-Byte + 4-Byte = 16 Byte = 20-Byte
